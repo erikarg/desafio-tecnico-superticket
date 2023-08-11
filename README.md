@@ -1,73 +1,119 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Desafio Backend Superticket  🎟️
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<details>
+<summary>:brazil: Português</summary>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Descrição
+
+A startup "Seu Direito" tem uma ideia de negócio muito interessante para o setor jurídico e precisa implementar um protótipo dessa ideia.
+
+## Objetivo
+
+Desenvolver uma aplicação capaz de permitir a contratação de serviços jurídicos entre advogados e empresas.
+
+## Stacks utilizadas
+
+* **Arquitetura:** REST
+* **Banco de dados:** SQLite
+* **Back-end:** NestJS, TypeORM, Node.js, Express.js
+* **Linguagem:** TypeScript
+* **Plataforma:** Docker
+* **Gerenciador de dependências**: Yarn
+* **Testes:** Jest
+
+## Postman
+
+Você utiliza o Postman? Então clica aqui pra baixar a collection com todas as rotas configuradas:
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29053218-78868825-52d9-4568-9eca-4d7f3bcc07c0?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29053218-78868825-52d9-4568-9eca-4d7f3bcc07c0%26entityType%3Dcollection%26workspaceId%3D490cfc7a-19e6-4f33-ab97-893bf7a7227a)
+
+PS: caso vá testar localmente, é necessário adicionar a variável {{BASE_URL}} como http://localhost:3000
+
+## Rodando a aplicação
+
+Realize o clone do projeto através do comando:
+
+`git clone git@github.com:erikarg/desafio-tecnico-superticket.git`
+
+Acesse a pasta do projeto:
+
+`cd desafio-tecnico-superticket/`
+
+Instale as dependências:
+
+`yarn install`
+
+Para iniciar a aplicação:
+
+`yarn start:dev`
+
+Para rodar os testes unitários:
+
+`yarn test`
+
+## Rotas
+
+![image](https://github.com/erikarg/desafio-tecnico-superticket/assets/121869991/25215a93-fb48-4b35-9d47-b613ea19ace2)
+
+## Demais orientações
+
+- O usuário deve ser registrado como lawyer ou company.
+- A ordem de serviço possui uma rota exclusiva para alterar o status. Essa rota deve ser utilizada pela empresa quando decidir contratar (enviando o status APPROVED no body) e/ou finalizar um serviço (enviando o status FINISHED).
+- Advogados não podem criar ordens de serviço, tampouco alterar o status delas. Apenas o preço, e somente quando a ordem de serviço não estiver delegada ou finalizada.
+
+</details>
+<br>
+<details>
+<summary>:us: English</summary>
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The startup "Seu Direito" has a very interesting business idea for the legal sector and needs to implement a prototype of this idea.
 
-## Installation
+## Objective
 
-```bash
-$ yarn install
-```
+Develop an application capable of allowing the contracting of legal services between lawyers and companies.
 
-## Running the app
+## Stacks
 
-```bash
-# development
-$ yarn run start
+* **Architecture:** REST
+* **Database:** SQLite
+* **Back-end:** NestJS, TypeORM, Node.js, Express.js
+* **Language:** TypeScript
+* **Platform:** Docker
+* **Dependency manager:** Yarn
+* **Tests:** Jest
 
-# watch mode
-$ yarn run start:dev
+## Running the application 
 
-# production mode
-$ yarn run start:prod
-```
+Clone the project using the command:
 
-## Test
+`git clone git@github.com:erikarg/desafio-tecnico-superticket.git`
 
-```bash
-# unit tests
-$ yarn run test
+Access the folder:
 
-# e2e tests
-$ yarn run test:e2e
+`cd desafio-tecnico-superticket`
 
-# test coverage
-$ yarn run test:cov
-```
+Install the dependencies:
 
-## Support
+`yarn install`
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+To run the application:
 
-## Stay in touch
+`yarn start:dev`
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+To run the unit tests:
 
-## License
+`yarn test`
 
-Nest is [MIT licensed](LICENSE).
+## Routes
+
+![image](https://github.com/erikarg/desafio-tecnico-superticket/assets/121869991/25215a93-fb48-4b35-9d47-b613ea19ace2)
+
+## Some guidelines
+
+- The user must be registered as a lawyer or company.
+- The service order has a unique route to change status. This route must be used by the company when it decides to hire (sending the APPROVED status in the body) and/or finalize a service (sending the FINISHED status).
+- Lawyers can't create service orders, nor change their status. Price only, and only when the work order is not already delegated or finalized.
+
+</details>
