@@ -6,10 +6,10 @@ import {
 } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { Request, Response, NextFunction } from 'express';
-import { jwtConstants } from 'src/auth/constants';
+import { jwtConstants } from '../auth/constants';
 import { JwtMiddleware } from './jwt.middleware';
 import { Connection } from 'typeorm';
-import { User } from 'src/modules/user/user.entity';
+import { User } from '../modules/user/user.entity';
 
 @Injectable()
 export class UserTypeMiddleware implements NestMiddleware {
