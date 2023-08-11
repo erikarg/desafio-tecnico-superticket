@@ -54,7 +54,7 @@ export class LawyerService {
       }
     } catch (error) {
       throw new HttpException(
-        'Não foi possível remover o advogado. Tente novamente',
+        'Não foi possível remover o advogado. Tente novamente.',
         HttpStatus.NOT_FOUND,
       );
     }
