@@ -57,6 +57,10 @@ Para rodar testes unitários:
 
 `yarn test`
 
+Para rodar testes e2e:
+
+`yarn test:e2e`
+
 ## Rotas
 
 ![image](https://github.com/erikarg/desafio-tecnico-superticket/assets/121869991/25215a93-fb48-4b35-9d47-b613ea19ace2)
@@ -90,6 +94,12 @@ Develop an application capable of allowing the contracting of legal services bet
 - **Dependency manager:** Yarn
 - **Tests:** Jest
 
+## Postman
+
+Do you use Postman? So click here and download the collection with all of the routes:
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29053218-78868825-52d9-4568-9eca-4d7f3bcc07c0?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29053218-78868825-52d9-4568-9eca-4d7f3bcc07c0%26entityType%3Dcollection%26workspaceId%3D490cfc7a-19e6-4f33-ab97-893bf7a7227a)
+
 ## Running the application
 
 Clone the project using the command:
@@ -119,6 +129,10 @@ http://localhost:3000
 To run the unit tests:
 
 `yarn test`
+
+To run the e2e tests:
+
+`yarn test:e2e`
 
 ## Routes
 
