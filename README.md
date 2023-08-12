@@ -45,15 +45,15 @@ Suba os containers:
 
 `docker-compose up -d`
 
+Inicie a aplicação:
+
+`yarn start:dev`
+
 Teste a aplicação:
 
 http://localhost:3000
 
-Para iniciar a aplicação:
-
-`yarn start:dev`
-
-Para rodar os testes unitários:
+Para rodar testes unitários:
 
 `yarn test`
 
@@ -108,13 +108,13 @@ Get those containers up:
 
 `docker-compose up -d`
 
+Run the application:
+
+`yarn start:dev`
+
 Test the application at:
 
 http://localhost:3000
-
-To run the application:
-
-`yarn start:dev`
 
 To run the unit tests:
 
