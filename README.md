@@ -1,4 +1,4 @@
-# Desafio Backend Superticket  🎟️
+# Desafio Backend Superticket 🎟️
 
 <details>
 <summary>:brazil: Português</summary>
@@ -13,21 +13,19 @@ Desenvolver uma aplicação capaz de permitir a contratação de serviços jurí
 
 ## Stacks utilizadas
 
-* **Arquitetura:** REST
-* **Banco de dados:** SQLite
-* **Back-end:** NestJS, TypeORM, Node.js, Express.js
-* **Linguagem:** TypeScript
-* **Plataforma:** Docker
-* **Gerenciador de dependências**: Yarn
-* **Testes:** Jest
+- **Arquitetura:** REST
+- **Banco de dados:** SQLite
+- **Back-end:** NestJS, TypeORM, Node.js, Express.js
+- **Linguagem:** TypeScript
+- **Plataforma:** Docker
+- **Gerenciador de dependências**: Yarn
+- **Testes:** Jest
 
 ## Postman
 
 Você utiliza o Postman? Então clica aqui pra baixar a collection com todas as rotas configuradas:
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29053218-78868825-52d9-4568-9eca-4d7f3bcc07c0?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D29053218-78868825-52d9-4568-9eca-4d7f3bcc07c0%26entityType%3Dcollection%26workspaceId%3D490cfc7a-19e6-4f33-ab97-893bf7a7227a)
-
-PS: caso vá testar localmente, é necessário adicionar a variável {{BASE_URL}} como http://localhost:3000
 
 ## Rodando a aplicação
 
@@ -42,6 +40,14 @@ Acesse a pasta do projeto:
 Instale as dependências:
 
 `yarn install`
+
+Suba os containers:
+
+`docker-compose up -d`
+
+Teste a aplicação:
+
+http://localhost:3000
 
 Para iniciar a aplicação:
 
@@ -76,15 +82,15 @@ Develop an application capable of allowing the contracting of legal services bet
 
 ## Stacks
 
-* **Architecture:** REST
-* **Database:** SQLite
-* **Back-end:** NestJS, TypeORM, Node.js, Express.js
-* **Language:** TypeScript
-* **Platform:** Docker
-* **Dependency manager:** Yarn
-* **Tests:** Jest
+- **Architecture:** REST
+- **Database:** SQLite
+- **Back-end:** NestJS, TypeORM, Node.js, Express.js
+- **Language:** TypeScript
+- **Platform:** Docker
+- **Dependency manager:** Yarn
+- **Tests:** Jest
 
-## Running the application 
+## Running the application
 
 Clone the project using the command:
 
@@ -97,6 +103,14 @@ Access the folder:
 Install the dependencies:
 
 `yarn install`
+
+Get those containers up:
+
+`docker-compose up -d`
+
+Test the application at:
+
+http://localhost:3000
 
 To run the application:
 
