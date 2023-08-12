@@ -1,9 +1,11 @@
+import { Lawyer } from '../../lawyer/entities/lawyer.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
 } from 'typeorm';
 
 export enum ServiceOrderStatus {
@@ -37,4 +39,7 @@ export class ServiceOrder {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  @ManyToOne(() => Lawyer, (lawyer) => lawyer.serviceOrders)
+  lawyer_id: Lawyer['id'];
 }

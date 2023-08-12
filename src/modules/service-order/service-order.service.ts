@@ -70,6 +70,7 @@ export class ServiceOrderService {
   async update(
     id: number,
     updateServiceOrderDto: UpdateServiceOrderDto,
+    lawyerId: number,
   ): Promise<ServiceOrder> {
     const serviceOrder = await this.findOne(id);
     if (serviceOrder.status !== ServiceOrderStatus.CREATED) {
@@ -78,7 +79,10 @@ export class ServiceOrderService {
         HttpStatus.FORBIDDEN,
       );
     }
-    await this.serviceOrderRepository.update(id, updateServiceOrderDto);
+    await this.serviceOrderRepository.update(id, {
+      price: updateServiceOrderDto.price,
+      lawyer_id: lawyerId,
+    });
     return this.findOne(id);
   }
 

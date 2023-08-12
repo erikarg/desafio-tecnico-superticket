@@ -1,9 +1,11 @@
+import { ServiceOrder } from '../../service-order/entities/service-order.entity';
 import {
   Entity,
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
   UpdateDateColumn,
+  OneToMany,
 } from 'typeorm';
 
 @Entity()
@@ -28,4 +30,7 @@ export class Lawyer {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  @OneToMany(() => ServiceOrder, (serviceOrder) => serviceOrder.lawyer_id)
+  serviceOrders: ServiceOrder[];
 }

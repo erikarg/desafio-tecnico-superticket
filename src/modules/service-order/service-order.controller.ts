@@ -7,11 +7,13 @@ import {
   Param,
   Delete,
   ParseIntPipe,
+  Req,
 } from '@nestjs/common';
 import { ServiceOrderService } from './service-order.service';
 import { CreateServiceOrderDto } from './dto/create-service-order.dto';
 import { UpdateServiceOrderDto } from './dto/update-service-order.dto';
 import { ServiceOrder } from './entities/service-order.entity';
+import { Request } from 'express';
 
 @Controller('service-order')
 export class ServiceOrderController {
@@ -43,8 +45,13 @@ export class ServiceOrderController {
   update(
     @Param('id') id: string,
     @Body() updateServiceOrderDto: UpdateServiceOrderDto,
+    @Req() request: Request,
   ) {
-    return this.serviceOrderService.update(+id, updateServiceOrderDto);
+    return this.serviceOrderService.update(
+      +id,
+      updateServiceOrderDto,
+      request['user'].id,
+    );
   }
 
   @Delete(':id')

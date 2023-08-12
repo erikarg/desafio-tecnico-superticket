@@ -5,7 +5,7 @@ import { AppModule } from './../src/app.module';
 
 describe('AppController (e2e)', () => {
   let app: INestApplication;
-
+  const mock = { statusCode: 401, message: 'Erro na autenticação do token.' };
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
@@ -15,10 +15,8 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
-    return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+  it('Rota base / (GET)', () => {
+    return request(app.getHttpServer()).get('/').expect(401).expect(mock);
   });
+  // Como todas as rotas estão protegidas, exceto a de login e registro, espera-se que a rota base dê erro de autenticação no primeiro contato.
 });
