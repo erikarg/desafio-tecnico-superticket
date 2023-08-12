@@ -1,0 +1,25 @@
+version: '3'
+services:
+  sqlite-db:
+    container_name: sqlite3
+    image: nouchka/sqlite3:latest
+    volumes:
+      - .:/db.sqlite
+    restart: always
+    ports:
+      - 5432:5432
+    stdin_open: true
+    tty: true
+
+  app:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - './:/app'
+    ports:
+      - 4000:3000
+    depends_on:
+      - sqlite-db
+    environment:
+      - DATABASE_URL=/db.sqlite
